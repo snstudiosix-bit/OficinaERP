@@ -23,6 +23,10 @@ namespace OficinaERP
             {
                 UsuarioNome = login.NomeUsuario;
                 UsuarioPerfil = login.PerfilUsuario;
+
+                // Verifica atualização
+                OficinaERP.Utils.Atualizador.VerificarAtualizacao().Wait();
+
                 Application.Run(new FrmPrincipal());
             }
         }
